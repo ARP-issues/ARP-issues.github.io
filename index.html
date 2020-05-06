@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>APR-Issues</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+</head>
+
+<body>
+<section class="page-header">
+	<h1 class="project-name">Characterizing Runtime Permission Issues</h1>
+	<h1 class="project-name">in Android Apps</h1>
+</section>
+
+<section class="main-content">
+	<h2 id="introduction">Introduction</h2>
+		<p class="textcontent">Android 6.0 introduces a new permission mechanism that allows apps to request permissions at runtime rather than installation time. 
+		While this runtime permission mechanism offers users greater flexibility in controlling an app's access to sensitive data and system features, 
+		it brings new challenges to app development. 
+		First, as users may grant or revoke a permission at anytime, developers need to ensure that their app checks for and properly requests required 
+		permissions before performing any critical actions. 
+		Second, since its introduction, the runtime permission mechanism keeps evolving and often gets customized by Android device manufacturers. 
+		Developers are expected to carefully test their apps on different Android versions or device models to check if permissions are properly requested
+		in all situations. 
+		Unfortunately, these requirements are impractical to real-world developers. 
+		Many Android apps in fact suffer from various runtime permission issues (ARP issues).
+		</p>
+		<p class="textcontent2em">
+		While existing studies have explored ARP issues, the understanding of such issues is still very limited. 
+		In this work, we performed a large-scale empirical study of ARP issues, aiming to gain a deeper understanding of the issues and build a taxonomy. 
+		Specifically, we analyzed 135 high-quality posts on Stack Overflow and 157 real ARP issues on GitHub. 
+		Based on the analysis, we found 11 patterns of ARP issues. 
+		For each pattern, we studied: 
+		(1) how the issues can be manifested, (2) how pervasive and serious they are in real-world apps, and (3) how they can be fixed. 
+		We also studied the evolution trends of different issue patterns from 2015 to 2019 and the potential impacts of different ARP issues on the 
+		Android ecosystem. Based on our findings, we further discussed the challenges in designing effective techniques to detect ARP issues. 
+		We hope that our study can shed light on future research and are of practical value to Android practitioners.
+		</p>
+    <h2 id="download-dataset">Download empirical study dataset</h2>
+    <p>
+        <a href="https://github.com/ARP-issues/ARP-issues.github.io/raw/master/Stack%20Overflow%20Posts.xlsx">Stack Overflow Posts.xlsx</a>
+    </p>
+	<p>
+        <a href="https://github.com/">Github Issues.xlsx</a>
+    </p>
+    
+	<h2 id="download-dataset">Download dangerous permission specifications</h2>
+    <p>
+        <a href="https://github.com/">API-DP mappings (API level 23-API level 29).xlsx</a>
+    </p>
+	<p>
+        <a href="https://github.com/">Changes of API-DP mappings across different Android versions.xlsx</a>
+    </p>
+	
+	<h2 id="download-dataset">APMINER</h2>
+    <p>
+        This is a tool that automatically collects the API-DP mappings from the Javadoc of Android SDK.
+    </p>
+	
+    <center><a href="https://github.com/" class="btnAP">View on GitHub</a></center>
+
+
+    </table>
+	
+    <footer class="site-footer">
+        <span class="site-footer-owner">
+            <a href="https://github.com/">The dataset </a> is maintained by <a href="https://github.com/">ARP-Issues</a>.
+        </span>
+    </footer>
+</section>
+</body>
+</html>
