@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ARPBENCH</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+</head>
+
+<body>
+<section class="page-header">
+	<h1 class="project-name">ARPBENCH</h1>
+</section>
+
+<section class="main-content">
+	<h2 id="introduction">Introduction</h2>
+		<p class="textcontent">
+            ARPBENCH  is a set of open source real-life Android applications  to be used as a evaluation ground for existing detectors on all ARP issues.
+        </p>
+        <p>
+            we constructed our ARPBENCH following three criteria: 
+        </p>
+        <p>
+            (1) the benchmark should contain the issues that have been fixed; 
+        </p>
+        <p>
+            (2) the benchmark should contain the issues whose corresponding apps can be successfully compiled; 
+        </p>
+        <p> 
+            (3) the benchmark should contain the issues that can be reproduced.With these criteria, we selected 94 real ARP issues from the whole set of 199 issues.
+		</p>
+    <h2 id="download-dataset">Download Benchmarks</h2>
+    <p>
+        <a href="https://github.com/ARP-issues/.../Type1">Type 1: Users revoke permissions that have already been granted at the app’s installation time</a>
+    </p>
+    <p>
+        <a href="https://github.com/ARP-issues/.../Type2">Type 2: Apps invoke APIs whose permission specification has evolved on incompatible platforms</a>
+    </p>
+    <p>
+        <a href="https://github.com/ARP-issues/.../Type3">Type 3: Apps targeting API levels 23-25 fail to request permissions separately on incompatible platforms</a>
+    </p>
+    <p>
+        <a href="https://github.com/ARP-issues/.../Type4">Type 4: Customized platforms may not grant all permissions required by legacy apps and may allow users to revoke granted permissions</a>
+    </p>
+    <p>
+        <a href="https://github.com/ARP-issues/.../Type5">Type 5: Some normal permissions on the original Android platforms turn to dangerous permissions on the customized platforms</a>
+    </p>
+    <p>
+        <a href="https://github.com/ARP-issues/.../Type6">Type 6: Customized legacy platforms may not grant all the required permissions to new apps, and permission check APIs always return PERMISSION_GRANTED on legacy platforms</a>
+    </p>
+    <p>
+        <a href="https://github.com/ARP-issues/.../Type7">Type 7: Incomplete permission check and request process</a>
+    </p>
+    <p>
+        <a href="https://github.com/ARP-issues/.../Type8">Type 8: Misusing permission request APIs</a>
+    </p>
+    <p>
+        <a href="https://github.com/ARP-issues/.../Type9">Type 9: Conflicting targetSdkVersion settings in <uses-sdk> attributes</a>
+    </p>
+    <p>
+        <a href="https://github.com/ARP-issues/.../Type10">Type 10: Libraries setting maxSdkVersion in <uses-permission> attributes</a>
+    </p>
+    <p>
+        <a href="https://github.com/ARP-issues/.../Type11">Type 11: Apps may not check and request permissions for libraries</a>
+    </p>
+    
+	
+	
+    <center><a href="https://github.com/ARP-issues/" class="btnAP">View All on GitHub</a></center>
+
+
+    </table>
+	
+    <footer class="site-footer">
+        <span class="site-footer-owner">
+            <a href="https://github.com/">The dataset </a> is maintained by <a href="https://github.com/">ARP-Issues</a>.
+        </span>
+    </footer>
+</section>
+</body>
+</html>
