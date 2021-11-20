@@ -8,34 +8,34 @@
 
 <body>
 <section class="page-header">
-	<h1 class="project-name">Characterizing Runtime Permission Issues</h1>
-	<h1 class="project-name">in Android Apps</h1>
+	<h1 class="project-name">Runtime Permission Issues in Android Apps:</h1>
+	<h1 class="project-name">Taxonomy, Practices, and Ways Forward</h1>
 </section>
 
 <section class="main-content">
 	<h2 id="introduction">Introduction</h2>
-		<p class="textcontent">Android 6.0 introduces a new permission mechanism that allows apps to request permissions at runtime rather than installation time. 
-		While this runtime permission mechanism offers users greater flexibility in controlling an app's access to sensitive data and system features, 
-		it brings new challenges to app development. 
-		First, as users may grant or revoke a permission at any time, developers need to ensure that their app checks for and properly requests required 
-		permissions before performing any critical actions. 
-		Second, since its introduction, the runtime permission mechanism keeps evolving and often gets customized by Android device manufacturers. 
-		Developers are expected to carefully test their apps on different Android versions or device models to check if permissions are properly requested
-		in all situations. 
-		Unfortunately, these requirements are impractical to real-world developers. 
-		Many Android apps in fact suffer from various runtime permission issues (ARP issues).
+		<p class="textcontent">Android introduces a new permission model that allows apps to request permissions at runtime rather than at the installation
+            time since 6.0 (Marshmallow, API level 23). While this runtime permission model provides users with greater flexibility in controlling an
+            app’s access to sensitive data and system features, it brings new challenges to app development. First, as users may grant or revoke
+            permissions at any time while they are using an app, developers need to ensure that the app properly checks and requests required
+            permissions before invoking any permission-protected APIs. Second, Android’s permission mechanism keeps evolving and getting
+            customized by device manufacturers. Developers are expected to comprehensively test their apps on different Android versions and
+            device models to make sure permissions are properly requested in all situations. Unfortunately, these requirements are often
+            impractical for developers. In practice, many Android apps suffer from various runtime permission issues (ARP issues).
 		</p>
 		<p class="textcontent2em">
-		While existing studies have explored ARP issues, the understanding of such issues is still very limited. 
-		In this work, we performed a large-scale empirical study of ARP issues, aiming to gain a deeper understanding of the issues and build a taxonomy. 
-		Specifically, we analyzed 135 high-quality posts on Stack Overflow and 157 real ARP issues on GitHub. 
-		Based on the analysis, we found 11 patterns of ARP issues. 
-		For each pattern, we studied: 
-		(1) how the issues can be manifested, (2) how pervasive and serious they are in real-world apps, and (3) how they can be fixed. 
-		We also studied the evolution trends of different issue patterns from 2015 to 2019 and the potential impacts of different ARP issues on the 
-		Android ecosystem. Based on our findings, we further discussed the challenges in designing effective techniques to detect ARP issues. 
-		We hope that our study can shed light on future research and are of practical value to Android practitioners.
-		</p>
+            While existing studies have explored ARP issues, the understanding of such issues is still preliminary. To better characterize ARP
+            issues, we performed an empirical study using 135 Stack Overflow posts that discuss ARP issues and 199 real ARP issues archived in
+            popular open-source Android projects on GitHub. Via analyzing the data, we observed 11 types of ARP issues that commonly occur in
+            Android apps. For each type of issues, we systematically studied: (1) how they can be manifested, (2) how pervasive and serious they
+            are in real-world apps, and (3) how they can be fixed. We also analyzed the evolution trend of different types of issues from 2015 to
+            2020 to understand their impact on the Android ecosystem. Furthermore, we conducted a field survey and in-depth interviews among
+            practitioners, to gain insights from industrial practices and learn practitioners’ requirements of tools that can help combat ARP issues.
+            Finally, to understand the strengths and weaknesses of the existing ARP issue detectors, we built ARPBENCH, an open benchmark
+            consisting of 94 real ARP issues, and evaluated the performance of three available ARP issue detectors. The experimental results
+            indicate that the existing tools have very limited supports for detecting our observed issue types and report a large number of false
+            alarms. We further analyzed the tools’ limitations and summarized the challenges of designing an effective ARP issue detection
+            technique. We hope that our findings can shed light on future research and provide useful guidance to practitioners.		</p>
     <h2 id="download-dataset">Download empirical study dataset</h2>
     <p>
         <a href="https://github.com/ARP-issues/ARP-issues.github.io/raw/master/Stack%20Overflow%20Posts.xlsx">Stack Overflow Posts.xlsx</a>
@@ -46,7 +46,7 @@
     
 	<h2 id="download-dataset">Dangerous permission specifications</h2>
     <p>
-        <a href="https://github.com/ARP-issues/ARP-DP-mappings">API-DP mappings (API level 23-API level 29)</a>
+        <a href="https://github.com/ARP-issues/ARP-DP-mappings">API-DP mappings (API level 23-API level 30)</a>
     </p>
 	<p>
         <a href="https://github.com/ARP-issues/ARP-DP-mappings/tree/master/mappingsDifference">Changes of API-DP mappings across different Android versions</a>
